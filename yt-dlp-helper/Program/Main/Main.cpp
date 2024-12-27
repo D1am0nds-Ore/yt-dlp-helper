@@ -1,9 +1,5 @@
-#include <iostream>
-#include <cstdio>
-#include <string>
-#include <cstdlib>
-#include <conio.h>
-
+#include "Main.h"
+#include "../checker/checker.h"
 using namespace std;
 
 void runCommand(const string& command) {
@@ -11,6 +7,7 @@ void runCommand(const string& command) {
 }
 
 int main() {
+    PyChecker checker;
     string youtubeLink;
     string customConfig;
     int choicepre, choice;
@@ -26,10 +23,20 @@ int main() {
 
     switch (choicepre) {
     case 1:
-        runCommand("pip install yt-dlp");
+        if (checker.isPyInstalled()) {
+            runCommand("pip install yt-dlp");
+        }
+        else {
+            cout << "No python installed. Install python please!\n";
+        }
         break;
     case 2:
-        runCommand("pip install -U --pre \"yt-dlp[default]\"");
+        if (checker.isPyInstalled()) {
+            runCommand("pip install -U --pre \"yt-dlp[default]\"");
+        }
+          else {
+            cout << "No python installed. Install python please!\n";
+        }
         break;
     case 3:
         // Not done yet
