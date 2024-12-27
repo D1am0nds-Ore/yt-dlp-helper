@@ -28,4 +28,4 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: yt-dlp-helper${{ matrix.platform }}${{ matrix.configuration }}
-        path: output/${{ matrix.platform }}/${{ matrix.configuration }}/*.exe
+        path: output/${{ matrix.platform }}/${{ matrix.configuration }}/yt-dlp-helper.exe
