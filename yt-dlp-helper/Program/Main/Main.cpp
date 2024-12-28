@@ -1,3 +1,8 @@
+#include <iostream>
+#include <cstdlib>
+#include <string>
+#include <conio.h>
+
 #include "Main.h"
 #include "../checker/checker.h"
 
@@ -33,7 +38,7 @@ int main() {
                 runCommand("pip install yt-dlp");
             }
             else {
-                cout << "No python installed. Install python please!\n";
+                cout << "No python installed. Install python, please!\n";
             }
             break;
         case 2:
@@ -41,7 +46,7 @@ int main() {
                 runCommand("pip install -U --pre \"yt-dlp[default]\"");
             }
             else {
-                cout << "No python installed. Install python please!\n";
+                cout << "No python installed. Install python, please!\n";
             }
             break;
         case 3:
