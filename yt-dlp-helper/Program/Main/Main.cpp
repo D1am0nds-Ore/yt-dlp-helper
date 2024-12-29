@@ -8,10 +8,6 @@
 
 using namespace std;
 
-void runCommand(const string& command) {
-    system(command.c_str());
-}
-
 int main() {
     PyChecker checker;
     string youtubeLink;
