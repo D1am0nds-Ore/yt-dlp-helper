@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 
+using namespace std;
+
 class PyChecker {
 public:
     bool isPyInstalled();
@@ -8,5 +10,5 @@ public:
 
 class Usrname {
 public:
-    std::string getUsername();
+    string getUsername();
 };

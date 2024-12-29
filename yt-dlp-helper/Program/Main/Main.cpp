@@ -12,7 +12,8 @@ int main() {
     PyChecker checker;
     string youtubeLink;
     string customConfig;
-    int choicepre, choice;
+    Usrname Username;
+    int choicepre, choicevid, choicelogin;
     bool running = true;
 
     while (running) {
@@ -46,8 +47,24 @@ int main() {
             }
             break;
         case 3:
-            // Not done yet
-            cout << "Login functionality not implemented yet.\n";
+            cout << "Choose and option:\n";
+            cout << "1.Login with username and password\n";
+            cout << "2.Oauth login\n";
+            cout << "Enter your choice (1-2): ";
+            cin >> choicelogin;
+            cin.ignore();
+
+            switch (choicelogin) {
+            case 1:
+                cout << "not done yet";
+                break;
+            case 2:
+                cout << "not done yet";
+                break;
+            default:
+                cout << "Invalid choice!\n";
+                break;
+            }
             break;
         case 4:
             cout << "Enter YouTube link: ";
@@ -60,10 +77,10 @@ int main() {
             cout << "5. List available formats\n";
             cout << "6. Download best video with customizable config\n";
             cout << "Enter your choice (1-6): ";
-            cin >> choice;
+            cin >> choicevid;
             cin.ignore();
 
-            switch (choice) {
+            switch (choicevid) {
             case 1:
                 runCommand("yt-dlp -f \"bestvideo+bestaudio\" --write-thumbnail --convert-thumbnail png " + youtubeLink);
                 break;
