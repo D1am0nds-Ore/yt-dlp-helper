@@ -10,9 +10,8 @@ using namespace std;
 
 int main() {
     PyChecker checker;
-    string youtubeLink;
-    string customConfig;
     Usrname Username;
+    string youtubeLink, customConfig;
     int choicepre, choicevid, choicelogin;
     bool running = true;
 
