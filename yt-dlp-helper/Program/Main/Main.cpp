@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include <fstream>
 #include <conio.h>
 
 #include "Main.h"
@@ -11,7 +12,9 @@ using namespace std;
 int main() {
     PyChecker checker;
     Usrname Username;
-    string youtubeLink, customConfig;
+    string youtubeLink, customConfig, uname, pwd;
+    string basicwin = "C:\\Users\\";
+    string fullwin = basicwin + Username;
     int choicepre, choicevid, choicelogin;
     bool running = true;
 
@@ -55,7 +58,19 @@ int main() {
 
             switch (choicelogin) {
             case 1:
-                cout << "not done yet";
+                cout << "Please insert username: ";
+                cin >> uname;
+                cin.ignore();
+                cout << "Please insert password: ";
+                cin >> pwd;
+                cin.ignore();
+                ifstream faaaaale(fullwin + "\\AppData\\Roaming\\yt-dlp\\config");
+                if (!faaaaale) {
+                    runCommand("yt-dlp -u " + uname + " -p " + pwd);
+                    break;
+                } else {
+                    break;
+                }
                 break;
             case 2:
                 cout << "not done yet";
